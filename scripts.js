@@ -113,3 +113,15 @@ document
 
         draw(juliaC, iterations, hexToRgb(baseColor), colorScheme);
     })
+    
+document
+    .getElementById('download')
+    .addEventListener('click', ()=> {
+        const dataURL = canvas.toDataURL('image/png');
+        const downloadLink = document.createElement('a');
+        downloadLink.href = dataURL;
+        downloadLink.download = 'julia_set_wallpaper.png';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+    })
