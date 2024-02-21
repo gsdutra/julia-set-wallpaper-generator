@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas Tests</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="control-box" id="settings">
+        <a>Generation settings:</a>
+        <label for="re-value">Re value:</label>
+        <input type="number" id="re-value" min="-2" max="2" value="0.3">
+        <label for="im-value">Im value:</label>
+        <input type="number" id="im-value" min="-2" max="2" value="0.02">
+        <label for="iterations">Iterations:</label>
+        <input type="number" id="iterations" min="0" max="50000" value="100">
+        <a>Base color:</a>
+        <input type="color" id="color-picker" name="colorPicker" value="#64C8FF">
+        <a>Color scheme:</a>
+        <select id="select-color">
+            <option value="0"> 0 </option>
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+        </select>
+        <button id="generate">Generate</button>
+        <button id="hide">Hide menu</button>
+    </div>
+    <canvas></canvas>
+    <script src="scripts.js"></script>
+</body>
+</html>
